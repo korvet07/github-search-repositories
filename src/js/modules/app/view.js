@@ -40,7 +40,7 @@ export default class View {
 
     element.innerHTML = html`<a class="result-link" href="${repos.html_url}" target="_blank">
                               <div class="img-wrapper">
-                                <img class="user-photo" src="${repos.owner.avatar_url}" alt="${repos.login}_photo">
+                                <img class="user-photo" src="${repos.owner.avatar_url}" alt="${repos.owner.login}_photo">
                               </div>
                               <h4 class="user-name">Репозиторий: <i>${repos.name}</i></h4>
                               <div>Язык: <i>${repos.language ? repos.language : 'не указан'}</i></div>
