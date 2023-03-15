@@ -11,7 +11,7 @@ export default class Search {
     this.view.loadMore.addEventListener('click', this.handleLoadMoreClick.bind(this));
     this.view.searchButton.addEventListener('click', this.handleSearchButtonClick.bind(this));
     this.view.searchInput.addEventListener('keydown', this.handleSearchInputKey.bind(this));
-    this.view.searchInput.addEventListener('input', this.handleSearchUsersInput.bind(this));
+    this.view.searchInput.addEventListener('input', this.handleSearchInputInput.bind(this));
   }
 
   searchRepositories() {
@@ -54,7 +54,7 @@ export default class Search {
     this.showRepos();
   }
 
-  handleSearchUsersInput(event) {
+  handleSearchInputInput(event) {
 
     if (!event.currentTarget.value) {
       this.view.clearList();
